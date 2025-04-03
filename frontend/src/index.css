@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply text-text-primary-light dark:text-text-primary-dark;
+        @apply bg-background-light dark:bg-background-dark;
+    }
+
+    input,
+    textarea,
+    select {
+        @apply bg-surface-light dark:bg-surface-dark;
+        @apply border-gray-300 dark:border-gray-600 rounded-lg;
+        @apply focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+        @apply dark:focus:ring-primary dark:focus:ring-opacity-50; /* Ensure dark mode focus styles */
+        @apply transition-all duration-200;
+    }
+}
+
+@layer components {
+    .audio-control {
+        @apply transition-all duration-200 ease-out;
+    }
+}
