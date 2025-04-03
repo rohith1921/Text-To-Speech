@@ -1,0 +1,11 @@
+# Global system files
+.DS_Store
+Thumbs.db
+
+# Common lock files
+package-lock.json
+yarn.lock
+
+# Temporary files
+*.tmp
+*.bak
