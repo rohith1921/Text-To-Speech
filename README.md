@@ -8,7 +8,7 @@
 
 A full-stack web application for converting text to speech with user authentication, daily conversion quotas, and audio file management.
 
-![App Screenshot](![app](https://github.com/user-attachments/assets/35891a6c-6654-4637-a9b8-3fd81d85cef7)
+![App ScreenShot](https://github.com/user-attachments/assets/35891a6c-6654-4637-a9b8-3fd81d85cef7)
 
 ## Table of Contents
 
