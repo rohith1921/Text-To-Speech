@@ -35,7 +35,7 @@ const AuthPage = ({ type }) => {
           password,
           options: { 
             data: { full_name: name },
-            emailRedirectTo: 'http://localhost:3000/confirm-success'
+            emailRedirectTo: 'https://text-to-speech-backend-bvu4.onrender.com/confirm-success'
           }
         });
         if (error) throw error;
@@ -56,33 +56,6 @@ const AuthPage = ({ type }) => {
         transition={{ duration: 0.3 }}
         className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 relative"
       >
-        {/* <AnimatePresence>
-          {isSuccess && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="absolute inset-0 bg-white dark:bg-gray-800 rounded-2xl flex flex-col items-center justify-center p-8 text-center"
-            >
-              <FiMail className="w-16 h-16 text-indigo-500 mb-4" />
-              <h2 className="text-2xl font-bold mb-2">Confirm Your Email</h2>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
-                We've sent a confirmation link to <strong>{email}</strong>.
-                <br />
-                Please check your inbox and verify your email to continue.
-              </p>
-              <div className="flex gap-4">
-                <button
-                  onClick={() => navigate('/login')}
-                  className="px-6 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600"
-                >
-                  Go to Login
-                </button>
-              </div>
-  </motion.div>
-          )}
-        </AnimatePresence> */}
-
         <div className={`${isSuccess ? 'opacity-0' : 'opacity-100'}`}>
           <div className="text-center mb-8">
             <motion.div
