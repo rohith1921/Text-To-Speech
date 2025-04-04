@@ -132,7 +132,7 @@ const MainWorkspace = ({ onNewConversion, selectedAudio, onSelectedAudio, onNewC
         const { data: { session } } = await supabase.auth.getSession();
 
         if (session) {
-          const response = await axios.get('http://localhost:5000/api/user-quota', {
+          const response = await axios.get('https://text-to-speech-backend-bvu4.onrender.com/api/user-quota', {
             headers: { Authorization: `Bearer ${session.access_token}` }
           });
           setQuota({
@@ -168,7 +168,7 @@ const MainWorkspace = ({ onNewConversion, selectedAudio, onSelectedAudio, onNewC
         throw new Error('Not authenticated');
       }
 
-      const response = await axios.post('http://localhost:5000/api/text-to-speech', {
+      const response = await axios.post('https://text-to-speech-backend-bvu4.onrender.com/api/text-to-speech', {
         text: text.trim(),
         language: selectedVoice,
         voice: selectedVoiceName
