@@ -7,14 +7,14 @@ const apiRoutes = require("./routes/apiRoutes");
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: ['https://text-to-speech-frontend-9xxd.onrender.com', 'http://localhost:3000'],
     methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
 
 app.options('*', cors({
-  origin: 'http://localhost:3000',
+  origin: ['https://text-to-speech-frontend-9xxd.onrender.com', 'http://localhost:3000'],
   methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
