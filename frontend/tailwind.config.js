@@ -1,14 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 
-export const darkMode = "class";
-
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#3B82F6",
+          500: "#3B82F6",
           600: "#2563EB",
         },
         background: {
@@ -34,6 +33,9 @@ module.exports = {
         width: "width",
       },
     },
-    plugins: [require("tailwind-scrollbar")],
   },
+  plugins: [
+    require("tailwind-scrollbar")({ nocompatible: true }),
+    require("@tailwindcss/typography"),
+  ],
 };
