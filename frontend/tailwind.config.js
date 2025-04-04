@@ -2,7 +2,7 @@
 
 module.exports = {
   darkMode: "class",
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html", "./src/components/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
