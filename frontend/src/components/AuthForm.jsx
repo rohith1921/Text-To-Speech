@@ -35,7 +35,7 @@ const AuthPage = ({ type }) => {
           password,
           options: { 
             data: { full_name: name },
-            emailRedirectTo: 'https://text-to-speech-backend-bvu4.onrender.com/confirm-success'
+            emailRedirectTo: 'https://text-to-speech-frontend-9xxd.onrender.com/confirm-success'
           }
         });
         if (error) throw error;
