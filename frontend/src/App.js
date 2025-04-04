@@ -14,6 +14,7 @@ import ConfirmationSuccess from './components/ConfirmationSucess';
 import ConfirmationPrompt from './components/ConfirmationPrompt';
 import { supabase } from './components/supabaseClient';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import './App.css';
 
 function App() {
   return (
