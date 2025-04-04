@@ -62,7 +62,7 @@ const MainApp = () => {
     const fetchAudioFiles = async () => {
       setLoadingFiles(true);
       try {
-        const response = await axios.get('http://localhost:5000/api/audio-files');
+        const response = await axios.get('https://text-to-speech-backend-bvu4.onrender.com/api/audio-files');
         setAudioFiles(response.data);
       } catch (error) {
         console.error('Error fetching audio files:', error);
@@ -80,7 +80,7 @@ const MainApp = () => {
         const { data: { session } } = await supabase.auth.getSession();
         if (session) {
           const response = await axios.get(
-            'http://localhost:5000/api/audio-files',
+            'https://text-to-speech-backend-bvu4.onrender.com/api/audio-files',
             {
               headers: {
                 Authorization: `Bearer ${session.access_token}`
@@ -117,7 +117,7 @@ const MainApp = () => {
     try {
       const { data: { session } } = await supabase.auth.getSession();
 
-      const response = await axios.delete(`http://localhost:5000/api/audio-files/${id}`,
+      const response = await axios.delete(`https://text-to-speech-backend-bvu4.onrender.com/api/audio-files/${id}`,
         {
           headers: {
             Authorization: `Bearer ${session.access_token}`
