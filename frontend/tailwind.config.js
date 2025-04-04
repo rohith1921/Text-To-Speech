@@ -1,37 +1,39 @@
 /** @type {import('tailwindcss').Config} */
-export const darkMode = 'class';
-export const content = ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"];
-export const theme = {
-  extend: {
-    colors: {
-      primary: {
-        DEFAULT: '#3B82F6',
-        600: '#2563EB',
-      },
-      background: {
-        light: '#F8FAFC',
-        dark: '#0F172A',
-      },
-      surface: {
-        light: '#FFFFFF',
-        dark: '#1E293B',
-      },
-      text: {
+
+export const darkMode = "class";
+
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
         primary: {
-          light: '#1E293B',
-          dark: '#F8FAFC',
+          DEFAULT: "#3B82F6",
+          600: "#2563EB",
         },
-        secondary: {
-          light: '#64748B',
-          dark: '#94A3B8',
-        }
-      }
+        background: {
+          light: "#F8FAFC",
+          dark: "#0F172A",
+        },
+        surface: {
+          light: "#FFFFFF",
+          dark: "#1E293B",
+        },
+        text: {
+          primary: {
+            light: "#1E293B",
+            dark: "#F8FAFC",
+          },
+          secondary: {
+            light: "#64748B",
+            dark: "#94A3B8",
+          },
+        },
+      },
+      transitionProperty: {
+        width: "width",
+      },
     },
-    transitionProperty: {
-      'width': 'width'
-    }
+    plugins: [require("tailwind-scrollbar")],
   },
 };
-export const plugins = [
-  require('tailwind-scrollbar'),
-];
