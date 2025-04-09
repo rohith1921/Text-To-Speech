@@ -1,12 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './style/postcss-import.css';
 
 @layer base {
     body {
         @apply text-text-primary-light dark:text-text-primary-dark;
         @apply bg-background-light dark:bg-background-dark;
-    }
+    };
 
     input,
     textarea,
@@ -23,4 +21,4 @@
     .audio-control {
         @apply transition-all duration-200 ease-out;
     }
-}
+};
